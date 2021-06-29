@@ -13,7 +13,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.concurrent.Executor;
@@ -29,9 +28,9 @@ public class PinPromptActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(null);
-        // int layout = getResources()
-        //         .getIdentifier("pin_prompt_activity", "layout", getPackageName());
-        // setContentView(layout);
+        int layout = getResources()
+                .getIdentifier("pin_prompt_activity", "layout", getPackageName());
+        setContentView(layout);
 
         if (savedInstanceState != null) {
             return;
