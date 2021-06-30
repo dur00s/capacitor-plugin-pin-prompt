@@ -29,16 +29,9 @@ public class PinPromptActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(null);
-        // int layout = getResources()
-        //         .getIdentifier("pin_prompt_activity", "layout", getPackageName());
-        // FrameLayout layout = new FrameLayout(this);
-        // // Define the LinearLayout's characteristics
-        // layout.setGravity(Gravity.CENTER);
-        // layout.setOrientation(LinearLayout.VERTICAL);
+        FrameLayout layout = new FrameLayout(this);
 
-        // // Set generic layout parameters
-        // LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        // setContentView(layout);
+        setContentView(layout);
 
         if (savedInstanceState != null) {
             return;
