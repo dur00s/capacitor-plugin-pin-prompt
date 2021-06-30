@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
+import android.widget.FrameLayout;
 
 import java.util.concurrent.Executor;
 import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL;
@@ -28,9 +29,16 @@ public class PinPromptActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(null);
-        int layout = getResources()
-                .getIdentifier("pin_prompt_activity", "layout", getPackageName());
-        setContentView(layout);
+        // int layout = getResources()
+        //         .getIdentifier("pin_prompt_activity", "layout", getPackageName());
+        // FrameLayout layout = new FrameLayout(this);
+        // // Define the LinearLayout's characteristics
+        // layout.setGravity(Gravity.CENTER);
+        // layout.setOrientation(LinearLayout.VERTICAL);
+
+        // // Set generic layout parameters
+        // LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        // setContentView(layout);
 
         if (savedInstanceState != null) {
             return;
@@ -80,6 +88,7 @@ public class PinPromptActivity extends AppCompatActivity {
                     .setDeviceCredentialAllowed(true)
                     .build();
         }
+        this.authenticate();
     }
 
     private void authenticate() {
